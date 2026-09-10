@@ -1,0 +1,24 @@
+.navbar {
+  height: 80px;
+  padding: 0 60px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  background-color: white;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.navbar img {
+  width: 55px;
+  height: 55px;
+
+  object-fit: contain;
+}
+
+.navbar h2 {
+  font-size: 24px;
+  font-weight: 600;
+}

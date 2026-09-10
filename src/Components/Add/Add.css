@@ -1,0 +1,15 @@
+.add button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #f5b800;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+
+
+.add button:hover {
+  background-color: #e0a800;
+}
