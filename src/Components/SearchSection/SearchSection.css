@@ -1,8 +1,55 @@
 .search-section {
   width: 100%;
+  min-height: 100vh;
+
+  padding: 40px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  gap: 20px;
+}
+
+.top-section {
+
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 16px;
-  margin-top: 40px;
+  gap: 20px;
+  
+}
+
+/* Search */
+.search {
+  flex: 0 0 auto;
+}
+
+/* Create Note button */
+.add {
+  flex: 0 0 auto;
+}
+
+/* Create/Edit form */
+.create-note {
+  flex: 0 0 500px;
+  margin: 0 auto;
+}
+
+/* Notes area */
+.notes-container {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(280px, 1fr)
+  );
+
+  gap: 20px;
+
+  margin-top: 30px;
 }
