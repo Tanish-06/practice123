@@ -1,9 +1,15 @@
 import React from 'react'
 import './Search.css'
-const Search = () => {
+const Search = ({ searchTerm, setSearchTerm }) => {
   return (
    <div className="search">
-      <input type="text" placeholder="Search your notes..." />
+      <input 
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+        placeholder="Search your notes..."
+      />
+     {searchTerm && (<button className="clear-button" onClick={() => setSearchTerm('')}>clear</button>)}
+      
     </div>
   )
 }

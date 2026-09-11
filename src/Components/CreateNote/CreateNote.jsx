@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import "./CreateNote.css";
 
@@ -33,8 +32,8 @@ const CreateNote = ({
                 title: title,
                 content: content,
               }
-            : note
-        )
+            : note,
+        ),
       );
     } else {
       // CREATE NEW NOTE
@@ -64,10 +63,7 @@ const CreateNote = ({
 
   return (
     <div className="create-note">
-
-      <h2>
-        {editIndex !== null ? "Edit Note" : "Create New Note"}
-      </h2>
+      <h2>{editIndex !== null ? "Edit Note" : "Create New Note"}</h2>
 
       <input
         type="text"
@@ -83,20 +79,14 @@ const CreateNote = ({
       ></textarea>
 
       <div className="buttons">
-
-        <button onClick={handleCancel}>
-          Cancel
-        </button>
+        <button onClick={handleCancel}>Cancel</button>
 
         <button onClick={handleSave}>
           {editIndex !== null ? "Update Note" : "Save Note"}
         </button>
-
       </div>
-
     </div>
   );
 };
 
 export default CreateNote;
-

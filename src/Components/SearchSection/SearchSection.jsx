@@ -10,15 +10,15 @@ import NoteCard from "../NoteCard/NoteCard";
 
 const SearchSection = () => {
   const [showCreateNote, setShowCreateNote] = useState(false);
-
   const [notes, setnotes] = useState([]);
-
   const [editIndex, setEditIndex] = useState(null);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const editNote = (index) => {
     setEditIndex(index);
     setShowCreateNote(true);
   };
+
 
   const deleteNote = (index) => {
     const updatedNotes = [...notes];
@@ -26,11 +26,25 @@ const SearchSection = () => {
     setnotes(updatedNotes);
   };
 
+
+  const filteredNotes = notes
+  .map((note, index) => ({
+    note,
+    originalIndex: index,
+  }))
+  .filter(
+    ({ note }) =>
+      note.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      note.content.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+
   return (
+
     <div className="search-section">
 
      <div className="top-section">
-  <Search />
+  <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
   <Add
     ShowCreateNote={(value) => {
       setEditIndex(null);
@@ -51,15 +65,17 @@ const SearchSection = () => {
 
       {!showCreateNote && (
   <div className="notes-container">
-    {notes.map((note, index) => (
+    {filteredNotes.length > 0 ? filteredNotes.map((note, originalIndex) => (
       <NoteCard
-        key={index}
+        key={originalIndex}
         note={note}
-        index={index}
+        index={originalIndex}
         deleteNote={deleteNote}
         editNote={editNote}
       />
-    ))}
+    )) : (
+      <p className="no-notes">No notes found.</p>
+    )}
   </div>
 )}
     </div>
