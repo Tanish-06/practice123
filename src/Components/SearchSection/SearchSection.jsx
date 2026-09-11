@@ -65,7 +65,7 @@ const SearchSection = () => {
 
       {!showCreateNote && (
   <div className="notes-container">
-    {filteredNotes.length > 0 ? filteredNotes.map((note, originalIndex) => (
+    {filteredNotes.length > 0 ? filteredNotes.map(({ note, originalIndex }) => (
       <NoteCard
         key={originalIndex}
         note={note}
