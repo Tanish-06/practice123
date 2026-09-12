@@ -2,7 +2,8 @@
   padding: 12px 20px;
   border: none;
   border-radius: 8px;
-  background-color: #f5b800;
+  /* background-color: #f5b800; */
+  background-color: var(--button-color);
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
@@ -11,5 +12,6 @@
 
 
 .add button:hover {
-  background-color: #e0a800;
+  /* background-color: #e0a800; */
+  background-color: var(--button-color);
 }

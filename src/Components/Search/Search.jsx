@@ -1,8 +1,8 @@
 import React from 'react'
 import './Search.css'
-const Search = ({ searchTerm, setSearchTerm }) => {
+const Search = ({ searchTerm, setSearchTerm, darkMode }) => {
   return (
-   <div className="search">
+   <div className={darkMode ? "search dark-mode" : "search"}>
       <input 
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}

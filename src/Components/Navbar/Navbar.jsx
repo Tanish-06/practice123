@@ -4,16 +4,16 @@ import "./Navbar.css";
 const Navbar = ({ darkMode, setDarkMode }) => {
   return (
     <>
-      <div className="navbar">
+      <div className={darkMode ? "navbar dark" : "navbar"}>
         <div className="logo">
           <img src={logo} alt="Logo" />
           <h2>My Notes App</h2>
         </div>
 
-        <div className="dark-mode-toggle-container">
+        <div className={darkMode ? "dark-mode-toggle-container dark" : "dark-mode-toggle-container"}>
             <button
           onClick={() => setDarkMode((prev) => !prev)}
-          className="dark-mode-toggle"
+          className={darkMode ? "dark-mode-toggle dark" : "dark-mode-toggle"}
         >
           {darkMode ? "☀️ Light" : "🌙 Dark"}
         </button>

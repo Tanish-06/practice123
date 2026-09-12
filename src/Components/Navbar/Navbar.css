@@ -3,7 +3,11 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
-  background-color: #f8f9fa;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -13,7 +17,11 @@
   display: flex;
   align-items: center;
   gap: 15px;
-  background-color: white;
+  background-color: var(--card-color);
+  border-radius: 10px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 .navbar .dark-mode-toggle-container {
   display: flex;
@@ -24,7 +32,8 @@
 .navbar .dark-mode-toggle {
   height: 40px;
   width: 60px;
-  background-color: #ccc;
+  background-color: var(--button-color);
+  color: var(--button-text);
   border-radius: 10px;
   position: relative;
   cursor: pointer;

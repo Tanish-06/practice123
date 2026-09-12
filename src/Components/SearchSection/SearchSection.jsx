@@ -8,7 +8,7 @@ import { useState } from "react";
 import CreateNote from "../CreateNote/CreateNote";
 import NoteCard from "../NoteCard/NoteCard";
 
-const SearchSection = () => {
+const SearchSection = ({ darkMode }) => {
   const [showCreateNote, setShowCreateNote] = useState(false);
   const [notes, setnotes] = useState([]);
   const [editIndex, setEditIndex] = useState(null);
@@ -45,12 +45,14 @@ const SearchSection = () => {
     <div className="search-section">
 
      <div className="top-section">
-  <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+  <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} darkMode={darkMode} />
   <Add
     ShowCreateNote={(value) => {
       setEditIndex(null);
       setShowCreateNote(value);
+      
     }}
+    darkMode={darkMode}
   />
 </div>
 
@@ -61,6 +63,7 @@ const SearchSection = () => {
     editIndex={editIndex}
     notes={notes}
     setEditIndex={setEditIndex}
+    darkMode={darkMode}
   />
 )}
 
@@ -73,6 +76,7 @@ const SearchSection = () => {
         index={originalIndex}
         deleteNote={deleteNote}
         editNote={editNote}
+        darkMode={darkMode}
       />
     )) : (
       (searchTerm==="")?

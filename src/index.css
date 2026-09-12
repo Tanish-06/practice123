@@ -1,0 +1,102 @@
+/* =========================
+   GLOBAL CSS
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =========================
+   LIGHT THEME
+========================= */
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #222222;
+
+  --card-color: #faf7f7;
+  --input-color: #ffffff;
+
+  --border-color: #dddddd;
+
+  --button-color: #f5b800;
+  --button-text: #000000;
+
+  --secondary-color: #eeeeee;
+}
+
+
+/* =========================
+   DARK THEME
+========================= */
+
+.dark {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+
+  --card-color: #1e1e1e;
+  --input-color: #252525;
+
+  --border-color: #444444;
+
+  --button-color: #f5b800;
+  --button-text: #000000;
+
+  --secondary-color: #333333;
+}
+
+
+/* =========================
+   MAIN APP
+========================= */
+
+.app {
+  min-height: 100vh;
+
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+
+/* =========================
+   COMMON ELEMENTS
+========================= */
+
+input,
+textarea {
+  background-color: var(--input-color);
+  color: var(--text-color);
+
+  border: 1px solid var(--border-color);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #888;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+  cursor: pointer;
+}

@@ -7,6 +7,7 @@ const CreateNote = ({
   editIndex,
   notes,
   setEditIndex,
+  darkMode
 }) => {
   const [title, settitle] = useState("");
   const [content, setcontent] = useState("");
@@ -62,7 +63,7 @@ const CreateNote = ({
   };
 
   return (
-    <div className="create-note">
+    <div className={darkMode ? "create-note dark-mode" : "create-note"}>
       <h2>{editIndex !== null ? "Edit Note" : "Create New Note"}</h2>
 
       <input

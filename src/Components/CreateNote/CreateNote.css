@@ -1,7 +1,8 @@
 .create-note {
   width: 450px;
   padding:  30px 50px 30px 30px;
-  background-color: rgb(250, 247, 247);
+  /* background-color: rgb(250, 247, 247); */
+  background-color: var(--card-color);
   border-radius: 12px;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
   display: flex;
@@ -19,7 +20,8 @@
   width: 100%;
   padding: 12px;
   
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
+  border: 1px solid var(--button-color);
   border-radius: 8px;
   font-size: 16px;
   outline: none;
@@ -46,5 +48,6 @@
 }
 
 .buttons button:last-child {
-  background-color: #ffb000;
+  /* background-color: #ffb000; */
+  background-color: var(--button-color);
 }
