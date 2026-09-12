@@ -39,6 +39,7 @@ const SearchSection = () => {
   );
 
 
+
   return (
 
     <div className="search-section">
@@ -74,7 +75,11 @@ const SearchSection = () => {
         editNote={editNote}
       />
     )) : (
+      (searchTerm==="")?
+        <p className="no-notes">No notes available.</p>
+     :
       <p className="no-notes">No notes found.</p>
+      
     )}
   </div>
 )}
