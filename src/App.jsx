@@ -7,11 +7,11 @@ const App = () => {
  
  
   return (
-    <>
+   < div className={darkMode ? "app dark" : "app"}>
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
       <SearchSection darkMode={darkMode} setDarkMode={setDarkMode} />
 
-    </>
+    </div>
   );
 };
 
