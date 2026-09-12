@@ -1,6 +1,6 @@
 import React from 'react'
 import './Search.css'
-const Search = ({ searchTerm, setSearchTerm, darkMode }) => {
+const Search = ({ searchTerm, setSearchTerm, darkMode, setDarkMode }) => {
   return (
    <div className={darkMode ? "search dark-mode" : "search"}>
       <input 

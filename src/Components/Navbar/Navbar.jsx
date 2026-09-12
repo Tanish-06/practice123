@@ -5,7 +5,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
   return (
     <>
       <div className={darkMode ? "navbar dark" : "navbar"}>
-        <div className="logo">
+        <div className={darkMode ? "logo dark" : "logo"}>
           <img src={logo} alt="Logo" />
           <h2>My Notes App</h2>
         </div>

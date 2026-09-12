@@ -2,7 +2,7 @@ import React from 'react'
 import './Add.css'
 import createNote from '../CreateNote/CreateNote'
 
-const Add = ({ ShowCreateNote ,darkMode}) => {
+const Add = ({ ShowCreateNote ,darkMode, setDarkMode}) => {
    
 
 
